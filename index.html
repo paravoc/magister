@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подготовка к магистратуре: МИФИ, МФТИ, ВШЭ</title>
+  <meta name="description" content="Интерактивный конспект и трекер подготовки к магистратуре МИФИ, МФТИ и ВШЭ.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="К началу страницы">
+      <span class="brand-mark">M</span>
+      <span>Магистратура 2026</span>
+    </a>
+    <nav class="nav" aria-label="Фильтр по вузам">
+      <button class="nav-button is-active" type="button" data-filter="all">Все</button>
+      <button class="nav-button" type="button" data-filter="mephi">МИФИ</button>
+      <button class="nav-button" type="button" data-filter="mipt">МФТИ</button>
+      <button class="nav-button" type="button" data-filter="hse">ВШЭ</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="top" aria-labelledby="page-title">
+    <div class="hero-content">
+      <p class="eyebrow">Личный трекер подготовки</p>
+      <h1 id="page-title">Теория, вопросы и прогресс по трем магистратурам</h1>
+      <p class="hero-text">
+        Конспект собран под МИФИ, МФТИ и ВШЭ: математика, алгоритмы, C++, информационные системы,
+        системное программирование, электроника, сети, базы данных и ML для умных устройств.
+      </p>
+      <div class="hero-actions" aria-label="Основные действия">
+        <a class="primary-link" href="#topics">Перейти к темам</a>
+        <button class="ghost-button" type="button" id="expandAllButton">Развернуть все</button>
+      </div>
+    </div>
+    <aside class="hero-panel" aria-label="Общий прогресс">
+      <div class="panel-title">Общий прогресс</div>
+      <div class="big-number" id="overallPercent">0%</div>
+      <div class="progress-track" aria-hidden="true">
+        <span id="overallProgressBar"></span>
+      </div>
+      <div class="panel-meta" id="overallStats">0 из 0 пунктов</div>
+    </aside>
+  </section>
+
+  <main class="layout">
+    <section class="toolbar" aria-label="Панель управления">
+      <label class="search-box">
+        <span>Поиск по теории и вопросам</span>
+        <input type="search" id="searchInput" placeholder="Например: графы, SQL, C++, схемотехника">
+      </label>
+      <div class="toolbar-actions">
+        <button class="secondary-button" type="button" id="collapseAllButton">Свернуть все</button>
+        <button class="secondary-button" type="button" id="exportButton">Экспорт прогресса</button>
+        <button class="danger-button" type="button" id="resetButton">Сбросить отметки</button>
+      </div>
+    </section>
+
+    <section class="summary-grid" id="universityGrid" aria-label="Карточки вузов"></section>
+
+    <section class="section-heading" id="topics">
+      <p class="eyebrow">Теория по вопросам</p>
+      <h2>Карточки подготовки</h2>
+      <p>Открывай темы, отмечай чекбоксы, ставь статус и оставляй короткие заметки. Все сохраняется в localStorage браузера.</p>
+    </section>
+
+    <section class="topic-list" id="topicList" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Источники:</strong>
+      официальные страницы приемных комиссий, страницы программ и два PDF из локальной папки Downloads.
+      Данные проверены 15.05.2026.
+    </div>
+    <div class="footer-links">
+      <a href="mipt_programmnaya_inzheneriya_exam.pdf">PDF МФТИ: программная инженерия</a>
+      <a href="mephi_09_04_02_exam.pdf">PDF МИФИ: 09.04.02</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
